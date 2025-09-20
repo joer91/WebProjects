@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile - Joe Ernest</title>
+    <link rel="stylesheet" href="professional-profile.css">
+  </head>
+  <body>
+
+    <!-- Animated Background -->
+    <div class="bg-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light theme">
+        <div class="theme-icon"></div>
+        <span id="theme-text">Dark</span>
+    </button>
+
+    <div class="page-container">
+        <div class="profile-container">
+            <header class="profile-header">
+                <h1 class="profile-name">Joe Ernest A. Paiste</h1>
+                <p class="profile-title">Software Developer</p>
+            </header>
+            
+            <main class="profile-content">
+                <section class="content-section about-section">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="bio">I'm a student who loves reading manga/manhwa/manhua and I want to be a software developer. I believe that continuous learning and curiosity are the keys to growth both personally and professionally.</p>
+                </section>
+                
+                <section class="content-section skills-section">
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <div class="skills-container">
+                        <ul class="skills-grid">
+                            <li class="skill-item" tabindex="0">HTML</li>
+                            <li class="skill-item" tabindex="0">CSS</li>
+                            <li class="skill-item" tabindex="0">JavaScript</li>
+                            <li class="skill-item" tabindex="0">MySQL</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="content-section gallery-section">
+                    <h2 class="section-title">Photos</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox(0)">
+                            <img src="Me.jpeg"loading="lazy">
+                            <div class="gallery-overlay">Nein
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(1)">
+                            <img src="IT3B.jpeg"loading="lazy">
+                            <div class="gallery-overlay">Classmates
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(2)">
+                            <img src="Homies.jpeg"loading="lazy">
+                            <div class="gallery-overlay">Friends
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(3)">
+                            <img src="Idk.jpeg"loading="lazy">
+                            <div class="gallery-overlay">Ayaya
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Lightbox Modal -->
+                <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+                    <div class="lightbox-content">
+                        <span class="lightbox-close">&times;</span>
+                        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+                        <div class="lightbox-nav">
+                            <button class="lightbox-prev" onclick="event.stopPropagation(); previousImage()">&lt;</button>
+                            <button class="lightbox-next" onclick="event.stopPropagation(); nextImage()">&gt;</button>
+                        </div>
+                        <div class="lightbox-counter" id="lightbox-counter">1 / 6</div>
+                    </div>
+                </div>
+                
+                <section class="content-section contact-section">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <div class="button-group">
+                        <button class="btn btn-primary">View Portfolio</button>
+                        <button class="btn btn-secondary">Browse Project</button>
+                        <a href="https://github.com/joer91" target="_blank">
+                          <button class="btn btn-accent">Visit My Github Profile</button>
+                          </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/joer.paiste.37" target="_blank" class="social-link">Facebook</a>
+                        <a href="https://www.instagram.com/joeeeee911" target="_blank" class="social-link">Instagram</a>
+                        <a href="https://www.tiktok.com/@joer_1" target="_blank" class="social-link">Tiktok</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+     <script>
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeText = document.getElementById('theme-text');
+            
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                themeText.textContent = 'Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeText.textContent = 'Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+         window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loadingScreen");
+        loader.classList.add("fade-out");
+        setTimeout(() => loader.style.display = "none", 500); // matches CSS transition
+      }, 1000); // <-- minimum 1 second display
+    });
+        </script>
+  </body>
+</html>

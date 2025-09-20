@@ -1,0 +1,88 @@
+/* Main heading styling */
+h1 {
+  color: #66fcf1;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Paragraph text */
+p {
+  color: #c5c6c7;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Body container */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0b0c10;
+  margin: 0;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;  /* Centers the content */
+}
+
+/* Add spacing to sections */
+h2 {
+  color: #45a29e;
+  font-size: 22px;
+  border-bottom: 4px solid #66fcf1;
+  padding-bottom: 6px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Style the list with better spacing */
+ul {
+  
+  background-color: #1f2833;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+li {
+  color: #c5c6c7;
+  margin-bottom: 8px;
+  font-size: 15px;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+  border-bottom: none;  /* Remove border from last item */
+}
+/* Button container */
+.button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Base button styles */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Hover effects */
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Active (clicked) state */
+button:active {
+  transform: translateY(-1px);
+}

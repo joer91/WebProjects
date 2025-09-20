@@ -1,0 +1,56 @@
+.profile-container {
+  background-color: #ac8968;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+/* Profile name styling */
+.profile-name {
+  font-family: fantasy;
+  color: #a65d36;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+/* Section styling */
+.section {
+  margin-bottom: 25px;
+}
+
+/* Biography text */
+.bio {
+  font-style: italic;
+  color: #3e3723;
+  text-align: center;
+}
+
+/* Interests list */
+.interests-list {
+  background-color: #93785b;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #865d36;
+}
+
+/* Different button styles */
+.btn-primary {
+  background-color: #a69080;
+  border-radius: 30px 60px;
+}
+
+.btn-secondary {
+  background-color: #a69080;
+  border-radius: 30px 60px;
+}
+
+.btn-primary:hover{
+  background-color:#a65d36;
+}
+
+.btn-secondary:hover {
+  background-color: #a65d36;
+}
